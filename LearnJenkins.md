@@ -58,3 +58,5 @@ Now you can test in the browser with
 ```
 http://<jenkins_server_name.com>
 ```
+
+Check Time: 20:50 in LinuxAcademy Install in Jenkins Quick Start  
