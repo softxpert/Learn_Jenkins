@@ -118,3 +118,11 @@ sudo apt-get install git
 cd /home/jenkins
 mkdir jenkins_slave
 ```
+
+### Using top To Monitor A Server via SSH
+```
+#On the client
+top -b -d 5 -n 1 >> index.log
+#Create a scheduled job, that reads the log file over ssh
+
+```
