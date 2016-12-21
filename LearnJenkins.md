@@ -79,3 +79,24 @@ sudo apt-get install jenkins
 #Set Jenkins to listen on port 8080. Access this port with your browser to start configuration.
 #If your /etc/init.d/jenkins file fails to start Jenkins, edit the /etc/default/jenkins to replace the line ----#HTTP_PORT=8080---- with ----HTTP_PORT=8081---- Here, "8081" was chosen but you can put another port available.
 ```
+
+Check if the jenkins user has a shell defined: /bin/bash
+```
+vi /etc/passwd
+>jenkins:x:119:128:Jenkins,,,:/var/lib/jenkins:/bin/bash
+passwd jenkins
+su - jenkins
+ssh-keygen
+ssh-copy-id jenkins@localhost
+visudo
+>jenkins ALL=(ALL) NOPASSWD: ALL
+```
+
+On the Clients
+```
+adduser jenkins
+passwd jenkins
+visudo
+>jenkins ALL=(ALL) NOPASSWD: ALL
+ssh-copy-id jenkins@<client-name>
+```
