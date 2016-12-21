@@ -102,9 +102,9 @@ visudo
 ssh-copy-id jenkins@<client-name>
 ```
 
-#If there are problems with TTY error messages in a build  
-#visudo  
-#>Defaults !requiretty  
+__If there are problems with TTY error messages in a build__  
+visudo  
+>Defaults !requiretty  
 
 ### Plugins
 
