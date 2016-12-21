@@ -98,5 +98,6 @@ adduser jenkins
 passwd jenkins
 visudo
 >jenkins ALL=(ALL) NOPASSWD: ALL
+#From the Jenkins server
 ssh-copy-id jenkins@<client-name>
 ```
