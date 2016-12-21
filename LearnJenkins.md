@@ -102,6 +102,19 @@ visudo
 ssh-copy-id jenkins@<client-name>
 ```
 
-#If there are problems with TTY error messages in a build
-#visudo
-#>Defaults !requiretty
+#If there are problems with TTY error messages in a build  
+#visudo  
+#>Defaults !requiretty  
+
+### Plugins
+
+* SSH plugin
+* Schedule Build Plugin
+
+### Setting Up a Build Slave
+```
+ssh jenkins@<slave_name>
+sudo apt-get install git
+cd /home/jenkins
+mkdir jenkins_slave
+```
