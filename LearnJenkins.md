@@ -101,3 +101,7 @@ visudo
 #From the Jenkins server
 ssh-copy-id jenkins@<client-name>
 ```
+
+#If there are problems with TTY error messages in a build
+#visudo
+#>Defaults !requiretty
