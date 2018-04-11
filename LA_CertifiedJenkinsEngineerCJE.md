@@ -84,3 +84,20 @@ Create a new job freestyle project
 Test the job and have a look at the output
 ```
 
+### Setting Up GitHub
+
+```
+# Get the public key from your jenkins master
+cat /var/lib/jenkins/.ssh/id_rsa.pub
+#In the Jenkins Gui go to your user => settings => SSH and GPG Keys => New key => Past the key => Add SSH key
+
+#Add new project in Github: jenkins_test
+Initialize with README
+Create Repository
+
+#Copy the ssh Git clone link
+You can now clone the repo
+
+
+
+```
