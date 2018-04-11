@@ -42,3 +42,45 @@ systemctl enable jenkins
 http://hostname:8080
 ```
 
+
+
+### Adding a Jenkins Slave
+
+```
+#On the master create an ssh key
+su jenkins -s /bin/bash
+ssh-keygen
+exit
+
+cat /var/lib/jenkins/.ssh/id_rsa
+
+#On the slave 
+useradd -d /var/lib/jenkins jenkins  # -d sets the home dir
+mkdir /var/lib/jenkins/.ssh
+vi /var/lib/jenkins/.ssh/authorized_keys
+>Past in the key from the master
+
+#Install java on the slave
+
+#In the Jenkins Gui "Manage Jenkins" => "Manage Nodes" => "New Node" / Node Name=Slave 1 / OK 
+Number of executors = 2
+Remote root directory = /var/lib/jenkins
+Usage = Use this Node as much as possible
+Launch Method = Launch slave agents via ssh
+Host = your slave hostname
+Add credential = jenkins
+   Kind = SSH username with private key
+   Username = jenkins
+   Private key = From the jenkins master home ssh
+   Credentials = jenkins
+   Host key verification strategy = Manualy trusted key verification
+   Availbility = Keep the agent online as much as possible
+   SAVE
+#Test it
+Create a new job freestyle project
+  Restrict where the job can be run = "Slave 1"
+  Build => Execute shell => echo "I ran!"
+  SAVE
+Test the job and have a look at the output
+```
+
