@@ -13,7 +13,7 @@ yum list java*
 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 Download dk-8u161-linux-x64.rpm
 scp dk-8u161-linux-x64.rpm user@your-server:/home/user
-rpm -Uvh dk-8u161-linux-x64.rpm
+rpm -Uvh jdk-8u161-linux-x64.rpm
 which java
 alternatives --install /usr/bin/java java /usr/java/latest/bin/java 200000
 alternatives --install /usr/bin/javac javac /usr/java/latest/bin/javac 200000
