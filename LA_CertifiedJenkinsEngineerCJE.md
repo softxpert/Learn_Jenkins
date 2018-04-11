@@ -31,6 +31,8 @@ wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenki
 cat /etc/yum.repos.d/jenkins.repo
 rpm --import http://pkg.jenkins.io/redhat-stable/jenkins.io.key
 yum install -y jenkins-2.19.4-1.1
+or newer
+yum install -y jenkins-2.107.2
 #Disable the repo after installation (So it cant be updated accidently)
 yum-config-manager --disable jenkins
 #Check if the port is open
