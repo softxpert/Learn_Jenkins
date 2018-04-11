@@ -1,5 +1,6 @@
 ## Certified Jenkins Engineer (CJE) - 2017
 
+```
 #Is Java installed?
 which java
 
@@ -21,3 +22,6 @@ vi /etc/rc.local
 >export JAVA_HOME="/usr/java/latest"
 
 or install openjdk
+
+```
+
