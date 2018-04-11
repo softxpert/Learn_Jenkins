@@ -112,5 +112,19 @@ Download now and install after restart
 wget https://updates.jenkins.io/download/plugins/thinBackup/1.8/thinBackup.hpi
 
 Click advanded tab in the plugin manager in Jenkins => Browse
+```
 
+### Source Code Management and the Git Plugin
+
+```
+#Install Git on the master and nodes
+yum install -y git
+
+```
+
+### Git Hooks and Other Build Triggers
+
+```
+In Github in the Settings of a project => Integrations and services => Add Services => Jenkins Git Plugin 
+Jenkins URL = Url from Jenkins Master http://fantomi1.mylabserver.com:8080/
 ```
