@@ -99,7 +99,18 @@ Create Repository
 
 #Copy the ssh Git clone link
 You can now clone the repo
+```
 
 
+### Plugin Manager
+
+```
+Install ThinBackup
+Download now and install after restart
+
+#Get an old version
+wget https://updates.jenkins.io/download/plugins/thinBackup/1.8/thinBackup.hpi
+
+Click advanded tab in the plugin manager in Jenkins => Browse
 
 ```
