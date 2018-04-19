@@ -182,6 +182,6 @@ The in the Freestyle Project add a Build step: Trigger call builds on other proj
 
 If you now push a new Build to the Git Master the Freestyle Project will executed
 
-
+#You can remove: Then in the Downstream Project => This Project is Parameterized => Add an parameter and echo it out
 ```
 
