@@ -185,3 +185,11 @@ If you now push a new Build to the Git Master the Freestyle Project will execute
 #You can remove: Then in the Downstream Project => This Project is Parameterized => Add an parameter and echo it out
 ```
 
+
+### Folders
+
+```
+Add new Project: Folders => Freestyles
+
+Go to the project view and click on arrow of a project and add.
+```
