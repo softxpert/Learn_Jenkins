@@ -193,3 +193,10 @@ Add new Project: Folders => Freestyles
 
 Go to the project view and click on arrow of a project and add.
 ```
+
+
+### Views
+
+```
+
+```
