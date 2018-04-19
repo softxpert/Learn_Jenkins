@@ -146,3 +146,15 @@ echo "Git Branch: $GIT_BRANCH"
 echo "Git Prev Commit: $GIT_PREVIOUS_COMMIT"
 echo "Git Url: $GIT_URL"
 ```
+
+### Parameterized Projects
+
+```
+In the Freestyle Project add a Build Step => Execute shell
+
+Klick on: This Project Is Parameterized
+Add a Text variable BRANCH with value master
+
+In the Git section: Branches to build => Branch Specifier (blank for 'any') => */$BRANCH 
+
+```
