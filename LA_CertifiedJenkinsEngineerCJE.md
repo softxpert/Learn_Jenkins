@@ -170,5 +170,18 @@ Build Trigger => Build after other projects are build => Projects to watch => My
 Add a build step => execute shell => echo "I ran!"
 
 Execute the Freestyle Project
+
+#What if we want to pass parameters to the Downstream Project?
+This is normally only available for pipelines
+But you can use a Plugin for this:
+Install the Parameterized Trigger Plugin
+
+Then in the Downstream Project => This Project is Parameterized => Add an parameter and echo it out
+
+The in the Freestyle Project add a Build step: Trigger call builds on other projects => Downstream Project => Add Parameter => Predefined Parameter => IMPORTANT_PARAMETER=$BUILD_NUMBER
+
+If you now push a new Build to the Git Master the Freestyle Project will executed
+
+
 ```
 
