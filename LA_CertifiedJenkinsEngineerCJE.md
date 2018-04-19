@@ -128,3 +128,14 @@ yum install -y git
 In Github in the Settings of a project => Integrations and services => Add Services => Jenkins Git Plugin 
 Jenkins URL = Url from Jenkins Master http://fantomi1.mylabserver.com:8080/
 ```
+
+### Workspace Environment Variables
+
+```
+In the Freestyle Project add a Build Step => Execute shell
+echo "Build Number: $BUILD_NUMBER" 
+echo "Node Name: $NODE_NAME"
+echo "Job Name: $JOB_NAME" 
+echo "Executor Number: $EXECUTOR_NUMBER" 
+echo "Workspace: $WORKSPACE"
+```
