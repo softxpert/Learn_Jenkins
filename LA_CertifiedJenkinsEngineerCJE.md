@@ -147,6 +147,7 @@ echo "Git Prev Commit: $GIT_PREVIOUS_COMMIT"
 echo "Git Url: $GIT_URL"
 ```
 
+
 ### Parameterized Projects
 
 ```
@@ -156,5 +157,18 @@ Klick on: This Project Is Parameterized
 Add a Text variable BRANCH with value master
 
 In the Git section: Branches to build => Branch Specifier (blank for 'any') => */$BRANCH 
+```
+
+
+### Upstream/Downstream Projects and the Parameterized Trigger Plugin
 
 ```
+Create a new Freestyle Project: Downstream Project
+
+Build Trigger => Build after other projects are build => Projects to watch => My Freestyle project, => Trigger only if build is stable
+
+Add a build step => execute shell => echo "I ran!"
+
+Execute the Freestyle Project
+```
+
