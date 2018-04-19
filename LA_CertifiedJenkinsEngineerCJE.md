@@ -138,4 +138,11 @@ echo "Node Name: $NODE_NAME"
 echo "Job Name: $JOB_NAME" 
 echo "Executor Number: $EXECUTOR_NUMBER" 
 echo "Workspace: $WORKSPACE"
+
+#Git specitic variables
+In the Freestyle Project add a Build Step => Execute shell
+echo "Git Commit: $GIT_COMMIT"
+echo "Git Branch: $GIT_BRANCH"
+echo "Git Prev Commit: $GIT_PREVIOUS_COMMIT"
+echo "Git Url: $GIT_URL"
 ```
