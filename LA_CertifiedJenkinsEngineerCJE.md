@@ -197,6 +197,8 @@ Go to the project view and click on arrow of a project and add.
 
 ### Curl
 
+http://34.241.127.7:8080/api/ 
+
 ```
 #Build job that is named
 curl jenkinsurl:8080/jobs/jobname/buildnumber. --user username:password
