@@ -195,8 +195,13 @@ Go to the project view and click on arrow of a project and add.
 ```
 
 
-### Views
+### Curl
 
 ```
+#Build job that is named
+curl jenkinsurl:8080/jobs/jobname/buildnumber. --user username:password
+
+#Parameterized build
+curl jenkinsurl:8080/jobs/jobname/buildnumber. --user username:password --data-urlencode json='{"parameter": [{"name":"id"},{"somevalue":"abcd"}]}'
 
 ```
