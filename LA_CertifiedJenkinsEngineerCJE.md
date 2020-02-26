@@ -207,3 +207,11 @@ curl jenkinsurl:8080/jobs/jobname/buildnumber. --user username:password
 curl jenkinsurl:8080/jobs/jobname/buildnumber. --user username:password --data-urlencode json='{"parameter": [{"name":"id"},{"somevalue":"abcd"}]}'
 
 ```
+
+### Artifacts
+
+#Defaul artifact location
+```
+Jenkins_root/jobs/buildname/builds/lastSuccessfulBuild/archive
+```
+
