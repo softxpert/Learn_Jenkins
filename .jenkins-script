@@ -14,7 +14,7 @@ IDENTIFIER = "${params.IDENTIFIER}".trim()
  * @return array
  */
 def getIdentifierParameter() {
-    setEnvVars()
+    //setEnvVars()
     return [$class: 'ValidatingStringParameterDefinition',
             //defaultValue: 'ed4-helloworld',
             description: """
