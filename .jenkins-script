@@ -53,7 +53,7 @@ def setEnvVars() {
     //git 'git@github.com:thomas-mundt/Learn_Jenkins'
     git 'https://github.com/thomas-mundt/Learn_Jenkins.git'
     
-    load "$JENKINS_HOME/externalMethod.groovy"
+    //load "$JENKINS_HOME/externalMethod.groovy"
     
     //REGION = "${env.AWS_REGION}"
     //ENVIRONMENT = "${env.ED4_ENV}"
