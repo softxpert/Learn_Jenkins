@@ -1,3 +1,18 @@
+/**
+ * Adds a boolean parameter
+ *
+ * @return array
+ */
+def getBucketParameter() {
+    return [$class: 'BooleanParameterDefinition',
+            description: """
+<b>Add bucket to module configuration</b>
+""" ,
+            name: 'BUCKET'
+    ]
+}
+
+
 node {
     stage('build') {
         sh  'echo "Hello!"'
