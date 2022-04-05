@@ -56,7 +56,7 @@ def setEnvVars() {
     sh 'pwd'
     sh 'ls -al'
     
-    //load "$JENKINS_HOME/externalMethod.groovy"
+    load "$JENKINS_HOME/workspace/jenkins-script/externalMethod.groovy"
     
     //REGION = "${env.AWS_REGION}"
     //ENVIRONMENT = "${env.ED4_ENV}"
