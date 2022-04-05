@@ -50,6 +50,8 @@ def getParameters() {
 
 
 def setEnvVars() {
+    git 'git@github.com:thomas-mundt/Learn_Jenkins'
+    
     load "$JENKINS_HOME/externalMethod.groovy"
     
     //REGION = "${env.AWS_REGION}"
