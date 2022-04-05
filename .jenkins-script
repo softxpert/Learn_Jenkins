@@ -7,14 +7,10 @@ import groovy.json.JsonSlurper
 //ENVIRONMENT = null
 //SUB_ENVIRONMENT = null
 IDENTIFIER = "${params.IDENTIFIER}".trim()
-//IDENTIFIER = "TEST"
 
 
-/**
- * Adds a string parameter
- *
- * @return array
- */
+
+
 def getIdentifierParameter() {
     setEnvVars()
     return [$class: 'ValidatingStringParameterDefinition',
@@ -30,11 +26,7 @@ def getIdentifierParameter() {
 
 
 
-/**
- * Adds a boolean parameter
- *
- * @return array
- */
+
 def getBucketParameter() {
     return [$class: 'BooleanParameterDefinition',
             description: """
@@ -45,11 +37,7 @@ def getBucketParameter() {
 }
 
 
-/**
- * Get all parameters as array
- *
- * @return array
- */
+
 def getParameters() {
     return [
         getIdentifierParameter(),
@@ -60,11 +48,7 @@ def getParameters() {
 
 
 
-/**
- * Load and set env vars
- *
- * @return
- */
+
 def setEnvVars() {
     //load "$JENKINS_HOME/ed4.groovy"
     //REGION = "${env.AWS_REGION}"
