@@ -1,4 +1,13 @@
 /**
+ * Parameters Section
+ */
+REGION = null
+ENVIRONMENT = null
+SUB_ENVIRONMENT = null
+IDENTIFIER = "${params.IDENTIFIER}".trim()
+
+
+/**
  * Adds a boolean parameter
  *
  * @return array
@@ -25,6 +34,17 @@ def getParameters() {
     ]
 }
 
+def generate() {
+    PARAMETERS = "-i $IDENTIFIER"
+
+    if (BUCKET.equals("true")) {
+        PARAMETERS += " -b"
+    }
+    
+    return $PARAMETERS
+}
+
+
 node {
 
     properties([
@@ -35,5 +55,7 @@ node {
 
     stage('build') {
         sh  'echo "Hello!"'
+        RET = generate()
+        echo $RET
     }
 }
