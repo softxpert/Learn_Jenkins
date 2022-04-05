@@ -5,6 +5,7 @@
 //ENVIRONMENT = null
 //SUB_ENVIRONMENT = null
 //IDENTIFIER = "${params.IDENTIFIER}".trim()
+IDENTIFIER = "TEST"
 
 
 /**
