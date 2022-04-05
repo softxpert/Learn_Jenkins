@@ -50,7 +50,8 @@ def getParameters() {
 
 
 def setEnvVars() {
-    //load "$JENKINS_HOME/externalMethod.groovy"
+    load "$JENKINS_HOME/externalMethod.groovy"
+    
     //REGION = "${env.AWS_REGION}"
     //ENVIRONMENT = "${env.ED4_ENV}"
     //SUB_ENVIRONMENT = "${env.SUB_ENVIRONMENT}"
