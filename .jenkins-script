@@ -1,7 +1,7 @@
 /**
  * Parameters Section
  */
-REGION = null
+//REGION = null
 //ENVIRONMENT = null
 //SUB_ENVIRONMENT = null
 //IDENTIFIER = "${params.IDENTIFIER}".trim()
