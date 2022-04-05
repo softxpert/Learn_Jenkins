@@ -42,7 +42,9 @@ def generate() {
         PARAMETERS += " -b"
     }
     
-    return $PARAMETERS
+    return [
+        $PARAMETERS
+    ]
 }
 
 
