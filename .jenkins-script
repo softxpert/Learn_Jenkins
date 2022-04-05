@@ -50,7 +50,8 @@ def getParameters() {
 
 
 def setEnvVars() {
-    git 'git@github.com:thomas-mundt/Learn_Jenkins'
+    //git 'git@github.com:thomas-mundt/Learn_Jenkins'
+    git 'https://github.com/thomas-mundt/Learn_Jenkins.git'
     
     load "$JENKINS_HOME/externalMethod.groovy"
     
