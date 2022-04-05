@@ -13,7 +13,26 @@ def getBucketParameter() {
 }
 
 
+/**
+ * Get all parameters as array
+ *
+ * @return array
+ */
+def getParameters() {
+    return [
+        getBucketParameter()
+
+    ]
+}
+
 node {
+
+    properties([
+        parameters(
+            getParameters()
+        )
+    ])
+
     stage('build') {
         sh  'echo "Hello!"'
     }
