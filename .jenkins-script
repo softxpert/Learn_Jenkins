@@ -42,9 +42,11 @@ def generate() {
         PARAMETERS += " -b"
     }
     
-    return [
-        $PARAMETERS
-    ]
+    echo "${PARAMETERS}"
+    
+    //return [
+    //    $PARAMETERS
+    //]
 }
 
 
@@ -58,7 +60,7 @@ node {
 
     stage('build') {
         sh  'echo "Hello!"'
-        RET = generate()
-        echo $RET
+        generate()
+        //echo $RET
     }
 }
