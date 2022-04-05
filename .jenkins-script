@@ -3,7 +3,7 @@ import groovy.json.JsonSlurper
 /**
  * Parameters Section
  */
-//REGION = null
+REGION = null
 //ENVIRONMENT = null
 //SUB_ENVIRONMENT = null
 IDENTIFIER = "${params.IDENTIFIER}".trim()
@@ -60,7 +60,7 @@ def setEnvVars() {
     
     externalMethod.lookAtThis("Steve")
     
-    //REGION = "${env.AWS_REGION}"
+    REGION = "${env.AWS_REGION}"
     //ENVIRONMENT = "${env.ED4_ENV}"
     //SUB_ENVIRONMENT = "${env.SUB_ENVIRONMENT}"
     echo "In setEnvVars"
