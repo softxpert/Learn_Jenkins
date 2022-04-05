@@ -16,7 +16,7 @@ IDENTIFIER = "${params.IDENTIFIER}".trim()
  * @return array
  */
 def getIdentifierParameter() {
-    //setEnvVars()
+    setEnvVars()
     return [$class: 'ValidatingStringParameterDefinition',
             //defaultValue: 'ed4-helloworld',
             description: """
@@ -57,6 +57,22 @@ def getParameters() {
 
     ]
 }
+
+
+
+/**
+ * Load and set env vars
+ *
+ * @return
+ */
+def setEnvVars() {
+    //load "$JENKINS_HOME/ed4.groovy"
+    //REGION = "${env.AWS_REGION}"
+    //ENVIRONMENT = "${env.ED4_ENV}"
+    //SUB_ENVIRONMENT = "${env.SUB_ENVIRONMENT}"
+    echo "In setEnvVars"
+}
+
 
 def generate() {
     PARAMETERS = "-i $IDENTIFIER"
