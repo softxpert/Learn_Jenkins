@@ -4,8 +4,28 @@
 //REGION = null
 //ENVIRONMENT = null
 //SUB_ENVIRONMENT = null
-//IDENTIFIER = "${params.IDENTIFIER}".trim()
-IDENTIFIER = "TEST"
+IDENTIFIER = "${params.IDENTIFIER}".trim()
+//IDENTIFIER = "TEST"
+
+
+/**
+ * Adds a string parameter
+ *
+ * @return array
+ */
+def getIdentifierParameter() {
+    setEnvVars()
+    return [$class: 'ValidatingStringParameterDefinition',
+            //defaultValue: 'ed4-helloworld',
+            description: """
+<b>Name of Service, use dashes here if required!</b>
+""" ,
+            regex: '^[a-z][a-z0-9-]{5,31}$',
+            name: 'IDENTIFIER'
+    ]
+}
+
+
 
 
 /**
@@ -31,6 +51,7 @@ def getBucketParameter() {
 def getParameters() {
     return [
         getBucketParameter()
+        getIdentifierParameter()
 
     ]
 }
