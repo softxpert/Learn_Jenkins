@@ -84,6 +84,6 @@ node {
     stage('build') {
         sh  'echo "Hello!"'
         generate()
-        //echo $RET
+        echo "JENKINS_HOME: ${JENKINS_HOME}"
     }
 }
