@@ -14,7 +14,7 @@ IDENTIFIER = "${params.IDENTIFIER}".trim()
 def getIdentifierParameter() {
     setEnvVars()
     return [$class: 'ValidatingStringParameterDefinition',
-            defaultValue: 'ed4-helloworld',
+            //defaultValue: 'ed4-helloworld',
             description: """
 <b>Name of Service, use dashes here if required!</b>
 """ ,
@@ -50,7 +50,7 @@ def getParameters() {
 
 
 def setEnvVars() {
-    //load "$JENKINS_HOME/ed4.groovy"
+    //load "$JENKINS_HOME/externalMethod.groovy"
     //REGION = "${env.AWS_REGION}"
     //ENVIRONMENT = "${env.ED4_ENV}"
     //SUB_ENVIRONMENT = "${env.SUB_ENVIRONMENT}"
