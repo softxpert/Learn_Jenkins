@@ -1,10 +1,10 @@
-
+BUCKET = "${params.BUCKET}".trim()
 
 
 
 
 def generate() {
-    echo params.BUCKET
+    echo "${BUCKET}"
 }
 
 
