@@ -28,6 +28,7 @@ def setDescription() {
     echo "setDescription"
     
     //def item = Jenkins.instance.getItemByFullName("terraform-resource-generator")
+    def job = jenkins.model.Jenkins.instance.getItemByFullName(env.JOB_NAME)
     
 //    item.setDescription('''
 //<b></b>
