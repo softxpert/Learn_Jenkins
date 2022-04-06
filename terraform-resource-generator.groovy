@@ -13,13 +13,14 @@ SNS             = "${params.SNS}".trim()
 
 
 def setDisplayNameAndDescription() {
-    script {
-        currentBuild.displayName = sprintf("#%s - %s", "${env.BUILD_NUMBER}", IDENTIFIER)
-    }
+    //script {
+    //    currentBuild.displayName = sprintf("#%s - %s", "${env.BUILD_NUMBER}", IDENTIFIER)
+    //}
     
     //wrap([$class: 'BuildUser']) {
     //    currentBuild.description = sprintf("Triggered by %s", "${env.BUILD_USER}")
     //}
+    echo "setDisplayNameAndDescription"
 }
 
 
