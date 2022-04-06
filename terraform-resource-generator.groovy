@@ -15,7 +15,10 @@ SNS             = "${params.SNS}".trim()
 def setDisplayNameAndDescription() {
     
     currentBuild.displayName = "#${env.BUILD_NUMBER} - ${IDENTIFIER}"
-    currentBuild.description = "Triggered by ${env.BUILD_USER}"
+    
+    wrap([$class: 'BuildUser']) {
+        currentBuild.description = "Triggered by ${env.BUILD_USER}"
+    }
     
     //sprintf("Triggered by %s", "${env.BUILD_USER}")
     
