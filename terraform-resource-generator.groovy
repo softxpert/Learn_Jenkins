@@ -1,4 +1,4 @@
-import groovy.json.JsonSlurper
+//import groovy.json.JsonSlurper
 
 /**
  * Parameters Section
@@ -15,9 +15,9 @@ SNS             = "${params.SNS}".trim()
 def setDisplayNameAndDescription() {
     currentBuild.displayName = sprintf("#%s - %s", "${env.BUILD_NUMBER}", IDENTIFIER)
 
-    wrap([$class: 'BuildUser']) {
-        currentBuild.description = sprintf("Triggered by %s", "${env.BUILD_USER}")
-    }
+    //wrap([$class: 'BuildUser']) {
+    //    currentBuild.description = sprintf("Triggered by %s", "${env.BUILD_USER}")
+    //}
 }
 
 
