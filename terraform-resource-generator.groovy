@@ -30,12 +30,7 @@ def setEnvVars() {
 def getParameters() {
     return [
         getIdentifierParameter(),
-        //getBucketParameter(),
-        //getDatabaseParameter(),
-        //getServiceAccountParameter(),
-        //getCognitoParameter(),
-        //getSqsParameter(),
-        //getSnsParameter(),
+        
 
     ]
 }
