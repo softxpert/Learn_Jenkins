@@ -23,10 +23,9 @@ def setDisplayNameAndDescription() {
 }
 
 
+
 def setDescription() {
-    
     def item = Jenkins.instance.getItemByFullName(env.JOB_NAME)
-    
     item.setDescription('''
 <b></b>
 This job will render a terraform service file for you with selected resources. Use it as a template and add additional
@@ -39,9 +38,7 @@ workspace named: IDENTIFIER.tf
 </ul>
 ''')
     item.save()
-    
 }
-
 
 
 def generate() {
