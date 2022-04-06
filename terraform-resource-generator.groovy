@@ -29,6 +29,24 @@ def setDisplayNameAndDescription() {
 }
 
 
+def setDescription() {
+    def item = Jenkins.instance.getItemByFullName("terraform-resource-generator")
+    item.setDescription('''
+<b></b>
+This job will render a terraform service file for you with selected resources. Use it as a template and add additional
+options as needed. The template will be printed to the console output. Additionally you can find a file in jobs
+workspace named: IDENTIFIER.tf
+<ul>
+<li>Use the file to create a PR in lqt-iac</li>
+<li>Modify parameters as needed</li>
+<li>The file will mostly not fully work as is, additional help from DevOps may be required</li>
+</ul>
+''')
+    item.save()
+}
+
+
+
 def generate() {
     
     PARAMETERS = "-i $IDENTIFIER"
@@ -98,7 +116,7 @@ pipeline {
             steps {
                 echo "build"
                 setDisplayNameAndDescription()
-                //setDescription()
+                setDescription()
                 generate()
             }
         }
