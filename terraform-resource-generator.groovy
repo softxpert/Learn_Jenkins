@@ -1,4 +1,3 @@
-import groovy.json.JsonSlurper
 
 
 
@@ -7,52 +6,23 @@ import groovy.json.JsonSlurper
 
 
 
-//def setEnvVars() {
-//  echo "setEnvVars" 
-//}
 
-//def getParameters() {
-//    return [
-//        getSqsParameter()
-//        
-//
-//    ]
-//}
+
 
 
 pipeline {
+    
     agent any
+    
+    parameters {
+        string(name: 'VERSION', defaultValue: '', description: '')
+        choice(name: 'VERSION', choices: ['1.1.0', '1.2.0', '1.3.0'], description: '')
+        booleanParam(name: 'executeTests', defaultValue; true, description: '')
+    }
+    
     stages {
-        stage('Setup parameters') {
-            steps {
-                script { 
-                    properties([
-                        parameters([
-                            choice(
-                                choices: ['ONE', 'TWO'], 
-                                name: 'PARAMETER_01'
-                            ),
-                            booleanParam(
-                                defaultValue: true, 
-                                description: '', 
-                                name: 'BOOLEAN'
-                            ),
-                            text(
-                                defaultValue: '''
-                                this is a multi-line 
-                                string parameter example
-                                ''', 
-                                 name: 'MULTI-LINE-STRING'
-                            ),
-                            string(
-                                defaultValue: 'scriptcrunch', 
-                                name: 'STRING-PARAMETER', 
-                                trim: true
-                            )
-                        ])
-                    ])
-                }
-            }
+        stage('Setup') {
+            echo "Setup"
         }
     }   
 }
