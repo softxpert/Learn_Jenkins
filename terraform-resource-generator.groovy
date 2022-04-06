@@ -3,11 +3,11 @@
 
 
 
-def generate() {
+//def generate() {
 
-    echo params.BUCKET
+//    echo params.BUCKET
     
-}
+//}
 
 
 
@@ -45,7 +45,7 @@ pipeline {
                 echo "build"
                 //setDisplayNameAndDescription()
                 //setDescription()
-                generate()
+                //generate()
             }
         }
     }
