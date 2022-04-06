@@ -15,7 +15,7 @@ SNS             = "${params.SNS}".trim()
 def setDisplayNameAndDescription() {
     
     //script {
-    currentBuild.displayName = "My custom build name"
+    currentBuild.displayName = "# ${env.BUILD_NUMBER} - ${IDENTIFIER}"
     currentBuild.description = "My custom build description"
                 //}
     //script {
