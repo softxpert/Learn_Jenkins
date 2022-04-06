@@ -11,6 +11,14 @@ SQS             = "${params.SQS}".trim()
 SNS             = "${params.SNS}".trim()
 
 
+def setDisplayNameAndDescription() {
+    currentBuild.displayName = sprintf("#%s - %s", "${env.BUILD_NUMBER}", IDENTIFIER)
+
+    wrap([$class: 'BuildUser']) {
+        currentBuild.description = sprintf("Triggered by %s", "${env.BUILD_USER}")
+    }
+}
+
 
 def generate() {
     
@@ -67,10 +75,10 @@ pipeline {
             steps {
                 echo "pre-condition-check"
                 
-                script {
-                    currentBuild.displayName = "My custom build name"
-                    currentBuild.description = "My custom build description"
-                }
+                //script {
+                //    currentBuild.displayName = "My custom build name"
+                //    currentBuild.description = "My custom build description"
+                //}
                 
                 //cleanWorkspace()
                 //setEnvVars()
@@ -80,7 +88,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "build"
-                //setDisplayNameAndDescription()
+                setDisplayNameAndDescription()
                 //setDescription()
                 generate()
             }
