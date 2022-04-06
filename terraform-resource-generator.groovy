@@ -10,15 +10,14 @@
  */
 def getIdentifierParameter() {
     setEnvVars()
-  
-#    return [$class: 'ValidatingStringParameterDefinition',
-#            //defaultValue: 'ed4-helloworld',
-#            description: """
-#<b>Name of Service, use dashes here if required!</b>
-#""" ,
-#            regex: '^[a-z][a-z0-9-]{5,31}$',
-#            name: 'IDENTIFIER'
-#    ]
+//    return [$class: 'ValidatingStringParameterDefinition',
+//            //defaultValue: 'ed4-helloworld',
+//            description: """
+//<b>Name of Service, use dashes here if required!</b>
+//""" ,
+//            regex: '^[a-z][a-z0-9-]{5,31}$',
+//            name: 'IDENTIFIER'
+//    ]
 }
 
 
@@ -29,12 +28,12 @@ def setEnvVars() {
 def getParameters() {
     return [
         getIdentifierParameter(),
-        #getBucketParameter(),
-        #getDatabaseParameter(),
-        #getServiceAccountParameter(),
-        #getCognitoParameter(),
-        #getSqsParameter(),
-        #getSnsParameter(),
+        //getBucketParameter(),
+        //getDatabaseParameter(),
+        //getServiceAccountParameter(),
+        //getCognitoParameter(),
+        //getSqsParameter(),
+        //getSnsParameter(),
 
     ]
 }
