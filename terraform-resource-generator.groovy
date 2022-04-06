@@ -22,6 +22,18 @@ def getIdentifierParameter() {
     ]
 }
 
+def getSqsParameter() {
+    return [$class: 'BooleanParameterDefinition',
+            description: """
+<b>Add sqs & sns to module configuration</b>
+""" ,
+            name: 'SQS'
+    ]
+}
+
+
+
+
 
 def setEnvVars() {
   echo "setEnvVars" 
@@ -29,7 +41,7 @@ def setEnvVars() {
 
 def getParameters() {
     return [
-        getIdentifierParameter(),
+        getSqsParameter()
         
 
     ]
