@@ -67,7 +67,10 @@ pipeline {
             steps {
                 echo "pre-condition-check"
                 
-                currentBuild.description = "my new description"
+                script {
+                    currentBuild.displayName = "My custom build name"
+                    currentBuild.description = "My custom build description"
+                }
                 
                 //cleanWorkspace()
                 //setEnvVars()
