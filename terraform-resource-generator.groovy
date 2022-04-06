@@ -16,7 +16,8 @@ def generate() {
     
     PARAMETERS = "-i $IDENTIFIER"
     
-    echo $PARAMETERS
+    echo "${PARAMETERS}"
+    
 //
 //    if (BUCKET.equals("true")) {
 //        PARAMETERS += " -b"
