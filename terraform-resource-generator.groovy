@@ -16,15 +16,16 @@ def setDisplayNameAndDescription() {
     
     currentBuild.displayName = "#${env.BUILD_NUMBER} - ${IDENTIFIER}"
     
-    wrap([$class: 'BuildUser']) {
-        currentBuild.description = "Triggered by ${env.BUILD_USER}"
-    }
+    //wrap([$class: 'BuildUser']) {
+    //    currentBuild.description = "Triggered by ${env.BUILD_USER}"
+    //}
     
     //sprintf("Triggered by %s", "${env.BUILD_USER}")
     
-    //wrap([$class: 'BuildUser']) {
-    //    currentBuild.description = sprintf("Triggered by %s", "${env.BUILD_USER}")
-    //}
+    wrap([$class: 'BuildUser']) {
+        currentBuild.description = "Triggered by ${BUILD_USER}"
+        //currentBuild.description = sprintf("Triggered by %s", "${env.BUILD_USER}")
+    }
 }
 
 
