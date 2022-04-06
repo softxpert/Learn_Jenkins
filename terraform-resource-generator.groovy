@@ -1,4 +1,5 @@
 //import groovy.json.JsonSlurper
+import jenkins.model.Jenkins
 
 /**
  * Parameters Section
@@ -26,7 +27,8 @@ def setDescription() {
   
     echo "setDescription"
     
-//    def item = Jenkins.instance.getItemByFullName("terraform-resource-generator")
+    def item = Jenkins.instance.getItemByFullName("terraform-resource-generator")
+    
 //    item.setDescription('''
 //<b></b>
 //This job will render a terraform service file for you with selected resources. Use it as a template and add additional
