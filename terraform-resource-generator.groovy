@@ -16,8 +16,8 @@ def generate() {
     
     PARAMETERS = "-i $IDENTIFIER"
     
-    //if (BUCKET.equals("true")) { PARAMETERS += " -b" }
-    if ("$BUCKET") { PARAMETERS += " -b" }
+    if (BUCKET.equals("true")) { PARAMETERS += " -b" }
+    //if ("$BUCKET") { PARAMETERS += " -b" }
 
     if (DATABASE.equals("true")) {
         PARAMETERS += " -d"
