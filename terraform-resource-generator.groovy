@@ -16,32 +16,31 @@ def generate() {
     
     PARAMETERS = "-i $IDENTIFIER"
     
-    echo "$PARAMETERS"
-    
-//
-//    if (BUCKET.equals("true")) {
-//        PARAMETERS += " -b"
-//    }
-//
-//    if (DATABASE.equals("true")) {
-//        PARAMETERS += " -d"
-//    }
-//
-//    if (SERVICE_ACCOUNT.equals("true")) {
-//        PARAMETERS += " -s"
-//    }
-//
-//    if (COGNITO.equals("true")) {
-//        PARAMETERS += " -c"
-//    }
-//
-//    if (SQS.equals("true")) {
-//        PARAMETERS += " -q"
-//    }
+    if (BUCKET.equals("true")) {
+        PARAMETERS += " -b"
+    }
 
-//    if (SNS.equals("true")) {
-//        PARAMETERS += " -n"
-//    }
+    if (DATABASE.equals("true")) {
+        PARAMETERS += " -d"
+    }
+
+    if (SERVICE_ACCOUNT.equals("true")) {
+        PARAMETERS += " -s"
+    }
+
+    if (COGNITO.equals("true")) {
+        PARAMETERS += " -c"
+    }
+
+    if (SQS.equals("true")) {
+        PARAMETERS += " -q"
+    }
+
+    if (SNS.equals("true")) {
+        PARAMETERS += " -n"
+    }
+    
+    echo "$PARAMETERS"
 }
 
 
