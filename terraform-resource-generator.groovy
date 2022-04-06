@@ -1,25 +1,55 @@
-BUCKET = "${params.BUCKET}".trim()
 
+/**
+ * Parameters Section
+ */
+IDENTIFIER      = "${params.IDENTIFIER}".trim()
+BUCKET          = "${params.BUCKET}".trim()
+DATABASE        = "${params.DATABASE}".trim()
+SERVICE_ACCOUNT = "${params.SERVICE_ACCOUNT}".trim()
+COGNITO         = "${params.COGNITO}".trim()
+SQS             = "${params.SQS}".trim()
+SNS             = "${params.SNS}".trim()
 
 
 
 def generate() {
-    echo "${BUCKET}"
+    
+    PARAMETERS = "-i $IDENTIFIER"
+    
+    echo $PARAMETERS
+//
+//    if (BUCKET.equals("true")) {
+//        PARAMETERS += " -b"
+//    }
+//
+//    if (DATABASE.equals("true")) {
+//        PARAMETERS += " -d"
+//    }
+//
+//    if (SERVICE_ACCOUNT.equals("true")) {
+//        PARAMETERS += " -s"
+//    }
+//
+//    if (COGNITO.equals("true")) {
+//        PARAMETERS += " -c"
+//    }
+//
+//    if (SQS.equals("true")) {
+//        PARAMETERS += " -q"
+//    }
+
+//    if (SNS.equals("true")) {
+//        PARAMETERS += " -n"
+//    }
 }
 
 
 
 
 pipeline {
-    
     agent any
     
     parameters {
-        //string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
-        //choice(name: 'VERSION', choices: ['1.1.0', '1.2.0', '1.3.0'], description: '')
-        //booleanParam(name: 'executeTests', defaultValue: true, description: 'Bla')
-        //validatingString(name: "IDENTIFIER", defaultValue: "", regex: /^[a-z][a-z0-9-]{5,31}$/, failedValidationMessage: 'Value entered does not match regular expression: ^[a-z][a-z0-9-]{5,31}$', description: "Name of Service, use dashes here if required!")
-        
         validatingString(name: "IDENTIFIER", defaultValue: "", regex: /^[a-z][a-z0-9-]{5,31}$/, failedValidationMessage: 'Value entered does not match regular expression: ^[a-z][a-z0-9-]{5,31}$', description: "Name of Service, use dashes here if required!")
         booleanParam(name: 'BUCKET', defaultValue: false, description: 'Add bucket to module configuration')
         booleanParam(name: 'DATABASE', defaultValue: false, description: 'Add database to module configuration')
