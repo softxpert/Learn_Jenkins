@@ -1,5 +1,5 @@
 //import groovy.json.JsonSlurper
-import jenkins.model.Jenkins
+//import jenkins.model.Jenkins
 
 /**
  * Parameters Section
