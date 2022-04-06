@@ -13,6 +13,11 @@ SNS             = "${params.SNS}".trim()
 
 
 def setDisplayNameAndDescription() {
+    
+    //script {
+    currentBuild.displayName = "My custom build name"
+    currentBuild.description = "My custom build description"
+                //}
     //script {
     //    currentBuild.displayName = sprintf("#%s - %s", "${env.BUILD_NUMBER}", IDENTIFIER)
     //}
