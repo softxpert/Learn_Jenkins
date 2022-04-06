@@ -16,15 +16,8 @@ def setDisplayNameAndDescription() {
     
     currentBuild.displayName = "#${env.BUILD_NUMBER} - ${IDENTIFIER}"
     
-    //wrap([$class: 'BuildUser']) {
-    //    currentBuild.description = "Triggered by ${env.BUILD_USER}"
-    //}
-    
-    //sprintf("Triggered by %s", "${env.BUILD_USER}")
-    
     wrap([$class: 'BuildUser']) {
         currentBuild.description = "Triggered by ${BUILD_USER}"
-        //currentBuild.description = sprintf("Triggered by %s", "${env.BUILD_USER}")
     }
 }
 
@@ -75,9 +68,6 @@ def generate() {
         PARAMETERS += " -n"
     }
     
-    
-    
-    
     echo "$PARAMETERS"
 }
 
@@ -101,11 +91,6 @@ pipeline {
         stage('pre-condition-check') {
             steps {
                 echo "pre-condition-check"
-                
-                //script {
-                //    currentBuild.displayName = "My custom build name"
-                //    currentBuild.description = "My custom build description"
-                //}
                 
                 //cleanWorkspace()
                 //setEnvVars()
