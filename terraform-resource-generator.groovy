@@ -40,6 +40,9 @@ def generate() {
         PARAMETERS += " -n"
     }
     
+    
+    
+    
     echo "$PARAMETERS"
 }
 
@@ -63,6 +66,9 @@ pipeline {
         stage('pre-condition-check') {
             steps {
                 echo "pre-condition-check"
+                
+                currentBuild.description = "my new description"
+                
                 //cleanWorkspace()
                 //setEnvVars()
                 //validateParameters()
