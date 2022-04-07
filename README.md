@@ -34,4 +34,8 @@ docker container run --name jenkins-blueocean \
 http://localhost:8080
 ```
 
+```
+docker exec jenkins-blueocean cat /var/jenkins_home/secrets/initialAdminPassword
+```
+
 
